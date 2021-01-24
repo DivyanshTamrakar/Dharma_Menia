@@ -223,7 +223,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: List.generate(9, (index) {
                     return Container(
                       child: Card(
-                        color: Colors.blue,
+                        child: Image.asset(
+                          "assets/hindu.png",
+                          height: 50.0,
+                          width: 50.0,
+                        ),
                       ),
                     );
                   }),
