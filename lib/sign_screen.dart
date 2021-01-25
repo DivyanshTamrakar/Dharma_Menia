@@ -64,6 +64,7 @@ class _SignScreenState extends State<SignScreen> {
                     margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     child: InkWell(
                       onTap: () {
+                        Navigator.of(context).pop();
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (BuildContext context) => HomeScreen()));
                         // signInusingGoogle();
@@ -109,7 +110,7 @@ class _SignScreenState extends State<SignScreen> {
                     margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     child: InkWell(
                       onTap: () {
-                        // signInusingGoogle();
+                        // signInusingFacebook();
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width,
@@ -158,7 +159,7 @@ class _SignScreenState extends State<SignScreen> {
                     margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                     child: InkWell(
                       onTap: () {
-                        // signInusingGoogle();
+                        // signInusingGuest();
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width,
@@ -183,7 +184,7 @@ class _SignScreenState extends State<SignScreen> {
                     ),
                   ),
                   Container(
-                      margin: EdgeInsets.only(top: 25.0, left: 35.0),
+                      margin: EdgeInsets.only(top: 45.0, left: 35.0),
                       child: Image.asset(
                         "assets/logo.png",
                         height: 35.0,

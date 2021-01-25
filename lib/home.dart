@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
+import 'cardinformation.dart';
+
 class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -8,7 +10,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
         drawer: Drawer(),
         appBar: AppBar(
@@ -30,12 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-
           child: Column(
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 2.5,
+                height: MediaQuery.of(context).size.height / 2.9,
                 decoration: BoxDecoration(
                   color: Colors.cyanAccent,
                   borderRadius:
@@ -105,8 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     Text(
                                       "150 pts",
-                                      style:
-                                          TextStyle(fontWeight: FontWeight.bold),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
@@ -140,8 +140,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     Text(
                                       "Ranking - 76",
-                                      style:
-                                          TextStyle(fontWeight: FontWeight.bold),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
@@ -153,7 +153,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           margin: EdgeInsets.only(right: 30.0, top: 30.0),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(70.0),
-                              border: Border.all(color: Colors.white, width: 3.0),
+                              border:
+                                  Border.all(color: Colors.white, width: 3.0),
                               boxShadow: [
                                 BoxShadow(
                                     color: Colors.grey,
@@ -205,7 +206,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   margin: EdgeInsets.only(left: 20.0, top: 20.0, bottom: 5.0),
                   child: Text(
                     "Available Religions In India",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23.0),
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 23.0),
                   )),
               Divider(
                 color: Colors.black26,
@@ -220,13 +222,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   crossAxisCount: 3,
-                  children: List.generate(9, (index) {
+                  children: List.generate(12, (index) {
                     return Container(
-                      child: Card(
-                        child: Image.asset(
-                          "assets/hindu.png",
-                          height: 50.0,
-                          width: 50.0,
+                      child: GestureDetector(
+                        onTap: () {
+                          print("Card number : " +  "$index");
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) => CardInformation(index_nm: index,)));
+                        },
+                        child: Card(
+                          child: Image.asset(
+                            "assets/hindu.png",
+                            height: 50.0,
+                            width: 50.0,
+                          ),
                         ),
                       ),
                     );
