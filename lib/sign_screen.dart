@@ -94,7 +94,7 @@ class _SignScreenState extends State<SignScreen> {
                   Container(
                       margin: EdgeInsets.only(top: 35.0, left: 35.0),
                       child: Image.asset(
-                        "assets/symbol-removebg-preview.png",
+                        "assets/google_icon.png",
                         height: 35.0,
                         width: 35.0,
                       )),
