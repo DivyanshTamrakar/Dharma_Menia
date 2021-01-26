@@ -127,18 +127,7 @@ class _CardInformationState extends State<CardInformation> {
             alignment: Alignment.centerLeft,
             margin: EdgeInsets.only(top: 10.0,left: 20.0),
             child: Text("Module Available ",style: TextStyle(fontWeight: FontWeight.bold),)),
-         Container(
-           child: ListView.builder(
-  itemBuilder: (context, position) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Text("", style: TextStyle(fontSize: 22.0),),
-      ),
-    );
-  },
-),,
-         )
+         
           ],
         ),
       ),
