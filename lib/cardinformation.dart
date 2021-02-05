@@ -1,3 +1,4 @@
+import 'package:dharma_mania/quiz_screen.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/widgets.dart';
 
@@ -103,9 +104,12 @@ class _CardInformationState extends State<CardInformation> {
                       child: RaisedButton(
                         color: button_one ? Colors.lightBlueAccent : Colors.grey,
                         onPressed: () {
+
                           setState(() {
                             button_one = !button_one;
                           });
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) => QuizScreen()));
                         },
                         child: Text("Culture"),
                       )),
