@@ -1,3 +1,4 @@
+import 'package:dharma_mania/resultscreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -267,6 +268,9 @@ class _QuizScreenState extends State<QuizScreen> {
                         borderRadius: BorderRadius.circular(20)),
                     onPressed: () {
                       print("Button Clicked");
+                      //temprary for checkin flow
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => ResultScreen()));
                     },
                     child: Text(
                       "Next",
