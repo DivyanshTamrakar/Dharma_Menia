@@ -4,17 +4,13 @@ import 'package:flutter/widgets.dart';
 
 import 'package:flutter/material.dart';
 
-import 'listcarddetails.dart';
+class ListCardInformation extends StatefulWidget {
 
-class CardInformation extends StatefulWidget {
-  final index_nm;
 
-  const CardInformation({Key key, this.index_nm}) : super(key: key);
-
-  _CardInformationState createState() => _CardInformationState();
+  _ListCardInformationState createState() => _ListCardInformationState();
 }
 
-class _CardInformationState extends State<CardInformation> {
+class _ListCardInformationState extends State<ListCardInformation> {
   bool button_one = false;
   bool button_two = false;
   String longText =
@@ -23,7 +19,7 @@ class _CardInformationState extends State<CardInformation> {
   @override
   void initState() {
     super.initState();
-    print(widget.index_nm);
+
   }
 
   @override
@@ -31,7 +27,7 @@ class _CardInformationState extends State<CardInformation> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar:
-          AppBar(backgroundColor: Colors.transparent, elevation: 0.0, actions: [
+      AppBar(backgroundColor: Colors.transparent, elevation: 0.0, actions: [
         SizedBox(
             width: 50.0,
             child: GestureDetector(
@@ -51,13 +47,13 @@ class _CardInformationState extends State<CardInformation> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Image.asset("assets/shiv.png"),
+            Image.asset("assets/ganeshji.png"),
             Container(
               margin: EdgeInsets.only(top: 20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Image.asset("assets/namaste.png"),
+                  Image.asset("assets/brah.png"),
                   Text(
                     "Hindusim",
                     style: TextStyle(
@@ -111,7 +107,7 @@ class _CardInformationState extends State<CardInformation> {
                             button_one = !button_one;
                           });
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) => ListCardInformation()));
+                              builder: (BuildContext context) => QuizScreen()));
                         },
                         child: Text("Culture"),
                       )),
@@ -129,11 +125,11 @@ class _CardInformationState extends State<CardInformation> {
                 ],
               ),
             ),
-          Container(
-            alignment: Alignment.centerLeft,
-            margin: EdgeInsets.only(top: 10.0,left: 20.0),
-            child: Text("Module Available ",style: TextStyle(fontWeight: FontWeight.bold),)),
-         
+            Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.only(top: 10.0,left: 20.0),
+                child: Text("Module Available ",style: TextStyle(fontWeight: FontWeight.bold),)),
+
           ],
         ),
       ),
