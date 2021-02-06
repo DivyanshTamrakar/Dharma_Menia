@@ -28,6 +28,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   percent_indicator: "^2.1.7+2"
   expandable_text: 1.2.0
+  confetti: ^0.5.4+1
 
 dev_dependencies:
   flutter_test:
